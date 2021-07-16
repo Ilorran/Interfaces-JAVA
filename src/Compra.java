@@ -1,13 +1,18 @@
 import java.util.Date;
 
-public class Compra implements ProcessaPago{
+public class Compra {
 
     private double valorDaCompra;
     private int IDcompra;
+    private double taxa;
 
-    public Compra(int IDcompra){
+    public Compra(int IDcompra, double taxa){
         this.valorDaCompra = valorDaCompra;
         this.IDcompra = 312;
+        this.taxa = 0.15;
+    }
+
+    public Compra() {
     }
 
     public double getValorDaCompra() {
@@ -26,18 +31,26 @@ public class Compra implements ProcessaPago{
         this.IDcompra = IDcompra;
     }
 
+    public double getTaxa() {
+        return taxa;
+    }
 
-    @Override
-    public boolean ProcessaPagamento(double valorDaCompra, int IDcompra) {
-        this.valorDaCompra = valorDaCompra;
-        if(valorDaCompra >= 0 && IDcompra == this.IDcompra) {
-            System.out.println("Compra processada com sucesso!");
-            System.out.println("Valor da compra: " + String.format("%.2f", getValorDaCompra()));
-            System.out.println("ID da transação: " + String.format("%.0f", getIDcompra()));
-            return true;
-        }
-        else{
-            System.out.println("Compra não processada.");
-        return false;}
-        }
+    public void setTaxa(double taxa) {
+        this.taxa = taxa;
+    }
+
+//    @Override
+//    public boolean ProcessaPagamento(Compra compra) {
+//        this.valorDaCompra = valorDaCompra;
+//        if(valorDaCompra >= 0 && IDcompra == this.IDcompra) {
+//            System.out.println("Compra processada com sucesso!");
+//            System.out.println("Valor da compra: " + String.format("%.2f", getValorDaCompra()));
+//            System.out.println("ID da transação: " + String.format("%.0f", getIDcompra()));
+//            System.out.println("Taxa: " + this.getTaxa());
+//            return true;
+//        }
+//        else{
+//            System.out.println("Compra não processada.");
+//        return false;}
+//        }
 }

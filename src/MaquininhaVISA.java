@@ -1,22 +1,15 @@
-public class MaquininhaELO extends Compra  implements ProcessaPago {
+public class MaquininhaVISA extends MaquininhaELO implements ProcessaPago{
 
-    private ProcessaPago processaPago;
-
-    public MaquininhaELO(ProcessaPago processaPago) {
+    public MaquininhaVISA() {
         super();
-        this.processaPago = processaPago;
-    }
-
-    public MaquininhaELO() {
-
     }
 
     @Override
     public boolean ProcessaPagamento(Compra compra) {
         super.setIDcompra(312);
-        super.setTaxa(0.15);
-        if(compra.getValorDaCompra() >= 0 && compra.getIDcompra() == compra.getIDcompra()) {
-            System.out.println("Compra processada com sucesso!(ELO)");
+        super.setTaxa(0.45);
+        if(compra.getValorDaCompra() >= 0 && compra.getIDcompra() == this.getIDcompra()) {
+            System.out.println("Compra processada com sucesso!(VISA)");
             System.out.println("Valor da compra: " + String.format("%.2f", getValorDaCompra()));
             System.out.println("ID da transação: " + String.format("%.0f", getIDcompra()));
             System.out.println("Taxa: " + getTaxa());
