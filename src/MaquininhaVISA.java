@@ -1,7 +1,8 @@
 public class MaquininhaVISA extends Compra implements ProcessaPago{
 
-    public MaquininhaVISA() {
+    public MaquininhaVISA(ProcessaPago processaPago) {
         super();
+        this.processaPago = processaPago;
     }
 
     @Override
