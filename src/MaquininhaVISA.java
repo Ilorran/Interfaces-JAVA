@@ -1,4 +1,4 @@
-public class MaquininhaVISA extends MaquininhaELO implements ProcessaPago{
+public class MaquininhaVISA extends Compra implements ProcessaPago{
 
     public MaquininhaVISA() {
         super();
