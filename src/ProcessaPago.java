@@ -1,5 +1,5 @@
 public interface ProcessaPago {
 
-    boolean ProcessaPagamento(Compra compra);
+    boolean ProcessaPagamento(Compra compra, double ValordaCompra);
 
 }
